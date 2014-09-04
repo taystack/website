@@ -1,0 +1,16 @@
+{
+  "name": "taylor-stackpole",
+  "author": "Taylor Stackpole",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-sass": "0.3.x",
+    "grunt-haml": "0.7.x",
+    "grunt-contrib-livereload": "0.1.x",
+    "grunt-regarde": "0.1.x",
+    "grunt-contrib-watch": "0.5.x",
+    "grunt-livescript": "0.5.x",
+    "grunt-contrib-clean": "0.4.x",
+    "grunt-contrib-symlink": "0.2.x"
+  }
+}

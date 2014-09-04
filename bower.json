@@ -1,0 +1,10 @@
+{
+  "name": "taylor-stackpole",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.0.x",
+    "normalize-css": "2.x",
+    "bourbon": "3.2.0-beta.2",
+    "bower-skrollr": "0.6.x"
+  }
+}

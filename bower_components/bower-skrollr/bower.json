@@ -1,0 +1,11 @@
+{
+  "name": "bower-skrollr",
+  "version": "0.6.21",
+  "main": "./skrollr.js",
+  "ignore": [
+    "bower.json",
+    "README.md"
+  ],
+  "dependencies": {
+  }
+}
