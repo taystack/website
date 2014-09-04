@@ -1,6 +1,6 @@
 ```bash
 $ npm install -g grunt-cli bower
-$ npm install && boewr install
+$ npm install && bower install
 $ grunt
 ```
 
