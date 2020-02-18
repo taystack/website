@@ -1,0 +1,59 @@
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  .Layer h1 {
+    margin: 35px 0;
+  }
+
+  .Layer h1,
+  .Layer h2,
+  .Layer h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .noMobile {
+    display: none;
+  }
+
+  #Header {
+    flex-direction: column;
+  }
+
+  .TabItem {
+    font-size: 1.5em;
+  }
+
+  #Tabs {
+    flex-direction: row;
+  }
+
+  .Card .CardSide {
+    padding: 0 2vw;
+    padding-top: 10vh;
+    flex-basis: 100%;
+  }
+
+  .Card .CardSide img {
+    max-width: 100vw;
+  }
+
+  .Card.rightPad {
+    flex-flow: wrap-reverse !important;
+  }
+
+  .ContactForm {
+    width: 100vw;
+  }
+
+  .Button {
+    min-width: auto;
+    padding: 20;
+  }
+}

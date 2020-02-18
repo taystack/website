@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1, h2, h3 {
+  /* font-family: monospace; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 1px; */
+  /* font-weight: normal; */
+}
+
+h3 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.7em;
+  font-size: 1.5em;
+}
+
+.hoverAppear {
+  opacity: 0.25;
+  cursor: pointer;
+  transition: opacity 80ms;
+}
+
+.hoverAppear.active,
+.hoverAppear:hover {
+  opacity: 0.75;
+}
+
+.TabItem {
+  font-size: 1.5em;
+}
+
+.Card .CardSide {
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+
+.Card .CardSide img {
+  max-width: 38vw;
+}
+
+.Card.single .CardSide {
+  flex-basis: 100%;
+}
+
+.ContactForm {
+  width: 500px;
+}
+
+.Button {
+  font-size: 1.5em;
+  min-width: 200px;
+  padding: 20px;
+}

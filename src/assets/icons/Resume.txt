@@ -1,0 +1,72 @@
+Taylor Stackpole
+P.O. Box 2513
+San Rafael, Ca 94902
+tay.stack+contact@gmail.com
+GitHub - taystack
+NPM - @taystack
+Stack Overflow - taystack
+
+Full Stack Software Engineer, Web Developer building fleshed-out production apps at a designer’s pace. Currently focused on the next steps for the JavaScript community, with the scrutiny of a neck-beard. I want to build progressive ideas.
+
+
+
+EXPERIENCE
+
+
+UpGuard Inc., Mountain View — Software Engineer, Full Stack
+
+DECEMBER 2015 - PRESENT
+
+* Lead frontend development, creation, and documentation of webpack build process for application Core.
+* Created, documented, and maintained React component library for use on all frontend projects.
+* Maintained and contributed to Rails backend for building custom RESTful API endpoints for Core.
+* Created a CyberRisk browser extension to help with awareness of risky websites.
+* Tools: Angular 1.[3..7], Rails [3..5], React 16, Webpack 4, Vanilla JS, ActiveRecord/PostgreSQL, Jest, Cucumber, Rspec
+
+
+Concordus Applications, Sacramento — Software Engineer, Frontend -> Full Stack
+
+AUGUST 2012 - DECEMBER 2015
+
+* Lead frontend development on abstracted CRM/PRM Flask, RESTful Backbone application.
+* Lead frontend development on CRM/PRM Flask integration service to use with abstracted CRM/PRM.
+Tools: Bootstrap.js, Flask, SqlAlchemy/PostgreSQL, Gulp
+
+
+
+EDUCATION
+
+
+American River College, Sacramento — A.S. Computer Programming C++
+FALL 2013
+
+American River College, Sacramento — A.S. Computer Programming Java
+FALL 2013
+
+American River College, Sacramento — A.S. Math/Physics
+FALL 2013
+
+
+
+SKILLS
+
+
+JavaScript, React, HTML5, CSS3, Node.js, Yarn (NPM), Webpack, Gulp, XMLHTTP
+
+Ruby Frameworks: Rails
+
+Python Frameworks: Flask
+
+JavaScript Frameworks: React.js [15..16] with Redux and Thunk, Angular.js 1.[3..7], Backbone.js
+
+Roy Fielding RESTful practices
+
+
+
+AWARDS
+
+Grand Prize - 2013 TM Forum API Hackathon: Best overall use of the TM Forum APIs - SF, California
+
+Mashery API Award 2013 Novartis Healthcare Challenge: Most creative use of the Mashery APIs.
+
+Concordus Applications MVP 2013
