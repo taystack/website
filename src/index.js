@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-// import GoogleAnalytics from "./hooks/useGoogleAnalytics";
+import GoogleAnalytics from "./hooks/useGoogleAnalytics";
 import {
   applyMiddleware,
   compose,
@@ -20,7 +20,7 @@ import "./styles/Animation.css";
 import "./styles/Tablet.css";
 import "./styles/Mobile.css";
 
-// GoogleAnalytics.initialize({"UA-1234567890": {}});
+GoogleAnalytics.initialize({"UA-1234567890": {}});
 
 const store = createStore(
   Reducer,

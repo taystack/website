@@ -12,9 +12,9 @@ import ImageColors from "../helpers/ImageColors";
 
 
 export function useBreakSources(color = "white") {
-  const [src, setSrc] = useState(bubbleWhiteSrc);
-  const [src2, setSrc2] = useState(bubbleWhiteBottomSrc);
-  const [src3, setSrc3] = useState(bubbleWhiteBottomSrc);
+  const [src, setSrc] = useState("");
+  const [src2, setSrc2] = useState("");
+  const [src3, setSrc3] = useState("");
 
   useEffect(() => {
     const { img, img2, img3 } = ImageColors.from(color);

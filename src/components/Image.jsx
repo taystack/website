@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import useTimeout from "@taystack/use-timeout";
-import useImageInView from "../hooks/useImageInView";
+// import useImageInView from "../hooks/useImageInView";
+import useImageQueue from "../hooks/useImageQueue";
+import Classnames from "../helpers/Classnames";
 
 
 const Image = ({
@@ -13,22 +15,27 @@ const Image = ({
   scrollY,
   style,
   test,
+  loaded,
   onLoad,
+  className,
   ...props
 }) => {
-  // const [ref, show, setLoaded] = useImageInView(scrollY, test);
-  const [show, setLoaded] = useState(false);
+  // Use the reducer here. Wait for all images to load properly
+  const [hasLoaded, setLoaded] = useImageQueue(dispatch, src);
+
+  const cx = Classnames(className, { hasLoaded });
 
   const styles = {
     ...style,
-    opacity: show ? 1 : 0,
+    opacity: loaded ? 1 : 0,
     transition: "opacity 200ms, top 200ms",
   };
   return (
     <img
+      className={cx}
       // ref={ref}
       onLoad={event => {
-        setLoaded(true)
+        setLoaded(true);
         onLoad(event);
       }}
       {...props}
@@ -41,7 +48,7 @@ const Image = ({
 };
 
 Image.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   id: PropTypes.string,
   style: PropTypes.object,
@@ -49,13 +56,13 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  src: "http://placekitten.com/g/200/200",
   alt: "image loading not supported",
   id: "",
   style: {},
   onLoad: () => {},
 };
 
-export default connect(({ scrollY }) => ({
+export default connect(({ scrollY, allImagesLoaded }) => ({
   scrollY,
+  loaded: allImagesLoaded,
 }))(Image);

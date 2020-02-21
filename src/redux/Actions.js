@@ -1,8 +1,11 @@
 import ImageColors from "../helpers/ImageColors";
+import HashHas from "../helpers/HashHas";
 
 
+export const SET_ALL_IMAGES_LOADED = "SET_ALL_IMAGES_LOADED";
 export const SET_CURRENT_TAB = "SET_CURRENT_TAB";
 export const SET_PROJECT_ISSUES = "SET_PROJECT_ISSUES";
+export const SET_QUEUED_IMAGES = "SET_QUEUED_IMAGES";
 export const SET_SCROLL_Y = "SET_SCROLL_Y";
 
 
@@ -59,6 +62,38 @@ export const setProjectIssues = issues => ({
   type: SET_PROJECT_ISSUES,
   issues,
 });
+
+export const setQueuedImages = (queuedImages, isDone) => ({
+  type: SET_QUEUED_IMAGES,
+  queuedImages,
+  isDone,
+});
+
+export const setAllImagesLoaded = done => ({
+  type: SET_ALL_IMAGES_LOADED,
+  done,
+});
+
+export const dequeueImage = src => {
+  return (dispatch, getState) => {
+    const queuedImages = { ...getState().queuedImages };
+    queuedImages[src] = true;
+    const all = Object.values(queuedImages);
+    const count = all.length;
+    const isDone = all.reduce((l, r) => (l && r));
+    dispatch(setQueuedImages(queuedImages, isDone));
+    if (isDone) dispatch(setAllImagesLoaded(true));
+  }
+};
+
+export const queueImage = src => {
+  return (dispatch, getState) => {
+    const queuedImages = { ...getState().queuedImages };
+    if (HashHas(queuedImages, src)) return;
+    queuedImages[src] = false;
+    dispatch(setQueuedImages(queuedImages));
+  };
+};
 
 export const getGithubProjectIssues = () => {
   return async dispatch => {

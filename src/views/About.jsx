@@ -14,22 +14,23 @@ import {
   projectProfile,
 } from "../constants/contact";
 import { setCurrentTab } from "../redux/Actions";
-// import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
+import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
-import aboutSrc from "../assets/bio/about.svg";
+// import aboutSrc from "../assets/bio/about.svg";
 import scienceSrc from "../assets/bio/science.svg";
 import californiaSrc from "../assets/bio/california.svg";
-import coffeeSrc from "../assets/bio/coffee.svg";
-import contactSrc from "../assets/bio/contact.svg";
+// import coffeeSrc from "../assets/bio/coffee.svg";
+// import contactSrc from "../assets/bio/contact.svg";
 import skillsSrc from "../assets/bio/skills.svg";
-import toolsSrc from "../assets/bio/tools.svg";
+// import toolsSrc from "../assets/bio/tools.svg";
 import toolkitSrc from "../assets/bio/toolkit.svg";
-import modulesSrc from "../assets/bio/modules.svg";
+// import modulesSrc from "../assets/bio/modules.svg";
 import ownershipSrc from "../assets/bio/ownership.svg";
-import tree from "../assets/bio/tree_bench_plain.svg";
-import bigDataSrc from "../assets/bio/bigdata.svg";
+// import tree from "../assets/bio/tree_bench_plain.svg";
+// import bigDataSrc from "../assets/bio/bigdata.svg";
 import responsive from "../assets/bio/responsive_plain.svg";
 import testing from "../assets/bio/testing.svg";
+import concerns from "../assets/bio/concerns.svg";
 
 
 
@@ -100,15 +101,29 @@ const About = ({
           <div>
             <h2 id="test-the-things">I test all the things</h2>
             <p>
-              I run Unit tests for the modules.
-              I run Integration tests for the controllers, and views.
-              I run Regression tests for the features.
-              I run tests so this baby is ready to rock.
+              Meaningful test coverage is crucial to ensure code does what you think it does.
+              I create small, dedicated modules that are perfect for testing in isolation, or mocking for other modules.&nbsp;
+              <a href="https://stackoverflow.com/questions/44769404/jest-spyon-function-called/46735186#46735186">I understand how to test.</a>
             </p>
           </div>
           <Image src={testing} />
         </Card>
 
+        <Card leftPad>
+          <Image src={concerns} />
+          <div>
+            <h2>I modularize and optimize</h2>
+            <p>
+              The first step to optimizing a process is to define the moving parts.
+              I've had to deal with enormous projects in my profession.
+              The best projects to work on have clearly defined architectures, where each piece plays a clearly defined role.
+              When things don't make sense, I communicate with colleagues until we build a roadmap to fix it.
+            </p>
+          </div>
+        </Card>
+      </Layer>
+
+      <Layer breakColor="orange">
         <Card leftPad>
           <Image src={skillsSrc} />
           <div>
@@ -128,7 +143,6 @@ const About = ({
             <p>
               This website is responsive.
               I'm guessing it works on your device right now.
-              You already noticed the crispy vector art.
               Even if you turn off JavaScript this website will still work.
               I'm all about making content available to users so I research the best, light-weight methods of presentation.
               I've been employing <code>flexbox</code> with <code>@media</code> query layouts for years.

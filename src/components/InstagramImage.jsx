@@ -17,7 +17,7 @@ const InstagramImage = ({
       position: "relative",
       marginLeft: 10,
     }} onClick={onClick}>
-      <Image src={source} {...props} style={{ borderRadius: 40, padding: 10, }} />
+      <Image src={source} {...props} style={{ filter: "grayscale(1)", borderRadius: 40, padding: 10, }} />
     </div>
   );
 };

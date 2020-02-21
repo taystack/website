@@ -8,6 +8,8 @@ import {
   SET_CURRENT_TAB,
   SET_PROJECT_ISSUES,
   SET_SCROLL_Y,
+  SET_QUEUED_IMAGES,
+  SET_ALL_IMAGES_LOADED,
 } from "./Actions";
 
 export const initialState = {
@@ -16,12 +18,18 @@ export const initialState = {
   theme: colors.about,
   scrollY: 0,
   issues: [],
+  queuedImages: {},
+  allImagesLoaded: false,
 };
 
 export default function Reducer(state = initialState, action) {
   let data = {};
 
   switch (action.type) {
+    case SET_ALL_IMAGES_LOADED:
+      return { ...state, allImagesLoaded: action.done };
+      break;
+
     case SET_CURRENT_TAB:
       return {
         ...state,
@@ -37,6 +45,10 @@ export default function Reducer(state = initialState, action) {
 
     case SET_PROJECT_ISSUES:
       return { ...state, issues: action.issues };
+      break;
+
+    case SET_QUEUED_IMAGES:
+      return { ...state, queuedImages: action.queuedImages };
       break;
 
     default:

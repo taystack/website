@@ -8,6 +8,7 @@ import Image from "../components/Image";
 import CommunityIcons from "../components/CommunityIcons";
 import ProjectIcons from "../components/ProjectIcons";
 import SocialIcons from "../components/SocialIcons";
+import LoadingOverlay from "../components/LoadingOverlay";
 import colors from "../constants/colors";
 import ImageColors from "../helpers/ImageColors";
 import emailImgSrc from "../assets/bio/email.svg";
@@ -16,6 +17,7 @@ import emailImgSrc from "../assets/bio/email.svg";
 const Footer = ({
   currentTab,
   breakColor,
+  loading,
 }) => {
   const { img, img3, color, font } = useMemo(() => ImageColors.from(breakColor), [breakColor]);
 
@@ -62,6 +64,7 @@ const Footer = ({
         <SocialIcons />
       </div>
     </div>
+    <LoadingOverlay />
     </>
   )
 };
@@ -72,7 +75,9 @@ Footer.defaultProps = {
 
 export default connect(({
   currentTab,
+  allImagesLoaded,
 }) => ({
   currentTab,
   breakColor: ImageColors.fromTab(currentTab),
+  loading: !allImagesLoaded,
 }))(Footer);
