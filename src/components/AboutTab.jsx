@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Random from "../helpers/Random";
 import PropTypeHexFormat from "../helpers/PropTypeHexFormat";

@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import Random from "../../helpers/Random";
-import PropTypeHexFormat from "../../helpers/PropTypeHexFormat";
+import React from "react";
 import TabItem from "../TabItem";
 import { tabConstant } from "../../redux/Actions";
 

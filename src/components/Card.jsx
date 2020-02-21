@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Classnames from "../helpers/Classnames";
 
@@ -19,18 +19,17 @@ const Card = ({
       paddingTop: "10vh",
       display: "flex",
       justifyContent: "space-around",
-      flexFlow: "row wrap",
     }}>
       {children && children.length && (<>
-        <CardSide padded={leftPad}>{children && children[0]}</CardSide>
-        <CardSide padded={rightPad}>{children[1] && children[1]}</CardSide>
+        <CardSide side="left" padded={leftPad}>{children && children[0]}</CardSide>
+        <CardSide side="right" padded={rightPad}>{children[1] && children[1]}</CardSide>
       </>)}
       {children && !children[0] && <CardSide padded={leftPad || rightPad}>{children}</CardSide>}
     </div>
   );
 }
 
-function CardSide({ children, padded }) {
+function CardSide({ children, padded, side }) {
   const style = {
     display: "flex",
     alignItems: "center",
@@ -38,8 +37,10 @@ function CardSide({ children, padded }) {
     flexShrink: 0,
   };
 
+  const className = Classnames("CardSide", side, { padded });
+
   return (
-    <div className="CardSide" style={style}>
+    <div className={className} style={style}>
       {children}
     </div>
   );

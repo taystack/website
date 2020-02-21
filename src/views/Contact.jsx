@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 import colors from "../constants/colors";
 import useFormField from "../hooks/useFormField";
 import usePhoneFormat from "../hooks/usePhoneFormat";
-import useLeet from "../hooks/useLeet";
 import { CV_LINK } from "../constants/contact";
 
 
@@ -23,8 +22,6 @@ export const Contact = ({
   const [name, setName, nameError, setNameError] = useFormField();
   const [email, setEmail, emailError, setEmailError] = useFormField();
   const [phone, setPhone] = usePhoneFormat();
-
-  const [leet, setLeet] = useLeet("");
 
   const validate = () => {
     let errors = false;

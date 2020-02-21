@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import PropTypeHexFormat from "../helpers/PropTypeHexFormat";
@@ -39,6 +39,7 @@ const TabItem = ({
         position: "relative",
         fontFamily: "monospace",
         fontWeight: "bold",
+        outline: "none",
         color: colors.black,
       }}
     >

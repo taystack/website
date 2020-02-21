@@ -1,0 +1,55 @@
+.floating {
+  -webkit-animation: floating 17s infinite; /* Safari 4+ */
+  -moz-animation:    floating 17s infinite; /* Fx 5+ */
+  -o-animation:      floating 17s infinite; /* Opera 12+ */
+  animation:         floating 17s infinite;
+}
+
+.floating-one80 {
+  -webkit-animation: floating-one80 30s infinite; /* Safari 4+ */
+  -moz-animation:    floating-one80 30s infinite; /* Fx 5+ */
+  -o-animation:      floating-one80 30s infinite; /* Opera 12+ */
+  animation:         floating-one80 30s infinite;
+}
+
+@-webkit-keyframes floating {
+  0%   { transform: translateY(-10vh); }
+  50% { transform: translateY(-8vh); }
+  100% { transform: translateY(-10vh); }
+}
+@-moz-keyframes floating {
+  0%   { transform: translateY(-10vh); }
+  50% { transform: translateY(-8vh); }
+  100% { transform: translateY(-10vh); }
+}
+@-o-keyframes floating {
+  0%   { transform: translateY(-10vh); }
+  50% { transform: translateY(-8vh); }
+  100% { transform: translateY(-10vh); }
+}
+@keyframes floating {
+  0%   { transform: translateY(-10vh); }
+  50% { transform: translateY(-8vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+@-webkit-keyframes floating-one80 {
+  0%   { transform: rotate(180deg) translateY(-10vh); }
+  50% { transform: rotate(180deg) translateY(-13px); }
+  100% { transform: rotate(180deg) translateY(-10vh); }
+}
+@-moz-keyframes floating-one80 {
+  0%   { transform: rotate(180deg) translateY(-10vh); }
+  50% { transform: rotate(180deg) translateY(-13px); }
+  100% { transform: rotate(180deg) translateY(-10vh); }
+}
+@-o-keyframes floating-one80 {
+  0%   { transform: rotate(180deg) translateY(-10vh); }
+  50% { transform: rotate(180deg) translateY(-13px); }
+  100% { transform: rotate(180deg) translateY(-10vh); }
+}
+@keyframes floating-one80 {
+  0%   { transform: rotate(180deg) translateY(-10vh); }
+  50% { transform: rotate(180deg) translateY(-13px); }
+  100% { transform: rotate(180deg) translateY(-10vh); }
+}

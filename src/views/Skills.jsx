@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Transition from "../components/Transition";
 import Layer from "../components/Layer";
 import Footer from "../components/Footer";
@@ -9,17 +9,22 @@ import skills, { message } from "../constants/skills";
 import colors from "../constants/colors";
 import bubblesPurple from "../assets/bubbles/purple.svg";
 import bubblesBlack from "../assets/bubbles/black.svg";
-import SkillsInput from "../components/Skills/SkillsInput";
-import skillsSrc from "../assets/bio/skills.svg";
+// import SkillsInput from "../components/Skills/SkillsInput";
+// import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
+import science from "../assets/bio/science.svg";
 
 
 
 const Skills = () => {
+  // useGoogleAnalytics("skills");
+  useEffect(() => {
+    document.title = "Skills | Taylor Stackpole the software engineer"
+  }, []);
   return (
     <Transition id="skills-view" transition="fade-slide">
       <Layer isTop dark>
         <Card leftPad>
-          <Image src={skillsSrc} />
+          <Image src={science} />
           <div>
             <h1>{message.first.title}</h1>
             <p>{message.first.text}</p>
@@ -29,7 +34,7 @@ const Skills = () => {
 
       <Layer>
         <Card leftPad>
-          <Image src={skillsSrc} />
+          <Image src={science} />
           <div>
             <h2>Assesment sources</h2>
             <p>This is a list of the publicly available assessment providers that contributed to the data above.</p>
@@ -37,19 +42,6 @@ const Skills = () => {
         </Card>
       </Layer>
 
-      {/* <Layer dark>
-        <Card>
-          <SkillsInput />
-        </Card>
-
-        <Card>
-          <p id="test-1">
-            Bacon ipsum dolor amet ball tip ribeye pork loin andouille jowl short ribs pancetta tongue beef ribs. Kielbasa tenderloin kevin venison biltong drumstick, turkey frankfurter pig. Turkey landjaeger chuck strip steak drumstick kevin ribeye tri-tip pig. Pork ground round meatball turkey, jowl shank pancetta cupim beef ribs tenderloin ham hock swine pig hamburger. T-bone kielbasa tenderloin meatloaf, tail chicken pork belly doner alcatra shoulder jowl pork chop cupim cow. Drumstick kevin flank, beef turducken alcatra capicola shankle pork loin t-bone tongue jerky pig pastrami jowl.
-          </p>
-        </Card>
-      </Layer> */}
-
-      <Footer />
     </Transition>
   );
 };

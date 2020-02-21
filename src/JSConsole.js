@@ -35,4 +35,11 @@ export default class JSConsole {
     this.magnetPointer = createSpanClone(el, "magnet-pointer");
     return this.magnetPointer;
   }
+
+  async getUser(username = "taystack") {
+    const src = `https://api.github.com/users/${username}/repos`;
+    const user = await fetch(src);
+    const data = await user.json();
+    console.log("data", data.map(({ name, id }) => ({ name, id })));
+  }
 }

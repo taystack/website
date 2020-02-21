@@ -7,44 +7,49 @@ import Skills from "./views/Skills";
 import Contact from "./views/Contact";
 import Error404 from "./views/Error404";
 import Header from "./components/Header";
-import Transition from "./components/Transition";
-import BackgroundTriangles from "./components/BackgroundTriangles";
-import { black, white } from "./constants/colors";
-import { setCurrentTab } from "./redux/Actions";
-import "./styles/TabItem.css";
+import Footer from "./components/Footer";
+import colors from "./constants/colors";
+import {
+  setCurrentTab,
+  // getGithubProjectIssues,
+} from "./redux/Actions";
 
 
-const Routes = connect()(({
+const Routes = connect(({ currentTab }) => ({ currentTab }))(({
   dispatch,
+  currentTab,
 }) => {
   const params = useParams();
-  const history = useHistory();
 
   useEffect(() => {
     if (params.currentTab) dispatch(setCurrentTab(params.currentTab));
+    else dispatch(setCurrentTab("about"));
   }, [params]);
 
   return (
     <>
+    <Route exact path="/" component={About} />
     <Route exact path="/about" component={About} />
     <Route exact path="/skills" component={Skills} />
     <Route exact path="/contact" component={Contact} />
+    <Route component={Error404} />
+    <Footer />
     </>
   );
 });
 
 const AppRouter = () => {
   useEffect(() => {
-    document.body.style.background = black;
+    document.body.style.background = colors.black2;
   }, []);
   return (
     <BrowserRouter>
       <div style={{ position: "relative" }}>
         <Header />
         <Route path="/:currentTab" component={Routes} />
-        <Route exact path="/" component={About} />
+        <Route exact path="/" component={Routes} />
+        {/* <Route exact path="/" component={About} /> */}
       </div>
-      <Route component={Error404} />
     </BrowserRouter>
   );
 };

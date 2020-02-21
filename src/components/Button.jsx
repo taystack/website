@@ -12,31 +12,21 @@ const Button = ({
   id,
   ...props
 }) => {
-  const [focused, setFocused] = useState(false);
-
   return (
     <div
       tabIndex={0}
       {...props}
       id={id}
-      className={Classnames("Button", props.className)}
-      onFocus={event => setFocused(true)}
-      onBlur={event => setFocused(false)}
-      onMouseLeave={event => setFocused(false)}
-      onMouseEnter={event => setFocused(true)}
-      onTouchCancel={event => setFocused(false)}
-      onTouchEnd={event => setFocused(false)}
-      onTouchStart={event => setFocused(true)}
+      className={Classnames("Button hoverAppear moreOpacity", props.className)}
       style={{
         borderRadius: 2,
-        boxShadow: "0 3px 3px 1px rgba(0,0,0,0.5)",
+        boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         transition: "background 100ms",
         outline: "none",
-        cursor: "default",
-        background: focused ? "white" : background,
+        background: background,
         color,
         ...style,
       }}

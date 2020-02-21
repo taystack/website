@@ -12,6 +12,7 @@ export const black = "#2d2d2d";
 export const black2 = "#171717";
 export const grey = "#9a9a9a";
 export const white = "#dedede";
+export const white2 = "#aaa";
 
 const colors = {
   backgroundDark: black,
@@ -19,7 +20,7 @@ const colors = {
   fontDark: black,
   fontLight: white,
 
-  about: blue,
+  about: green,
   skills: purple,
   contact: green,
   error: red,
@@ -31,11 +32,13 @@ const colors = {
   black,
   black2,
   white,
+  white2,
   grey,
   green,
   blue,
   orange,
   purple,
+  purpleDark,
   [`${white}Dark`]: grey,
   [`${orange}Dark`]: orangeDark,
   [`${blue}Dark`]: blueDark,

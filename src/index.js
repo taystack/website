@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
+// import GoogleAnalytics from "./hooks/useGoogleAnalytics";
 import {
   applyMiddleware,
   compose,
@@ -11,10 +12,15 @@ import thunk from "redux-thunk";
 import * as serviceWorker from "./serviceWorker";
 import Reducer from "./redux/Reducer";
 import Router from "./Router";
-import JSConsole from "./JSConsole";
+// import JSConsole from "./JSConsole";
 import "./index.css";
+import "./styles/Interactive.css";
+import "./styles/TabItem.css";
+import "./styles/Animation.css";
 import "./styles/Tablet.css";
 import "./styles/Mobile.css";
+
+// GoogleAnalytics.initialize({"UA-1234567890": {}});
 
 const store = createStore(
   Reducer,
@@ -37,5 +43,3 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register();
-
-window.JSConsole = new JSConsole();

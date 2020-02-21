@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import useTimeout from "@taystack/use-timeout";
 import { useHistory, useLocation } from "react-router";
-
 import AboutTab from "./AboutTab";
-import ContactTab from "./ContactTab";
 import Image from "./Image";
+import Classnames from "../helpers/Classnames";
+import InstagramImage from "./InstagramImage";
 import ScrollWatcher from "./ScrollWatcher";
 import SkillsTab from "./Skills/SkillsTab";
 import githubSrc from "../assets/icons/github.svg";
 import npmSrc from "../assets/icons/npm.svg";
-import colors from "../constants/colors";
 import SocialIcons from "../components/SocialIcons";
+import colors from "../constants/colors";
 import {
   githubProfile,
   npmProfile,
@@ -31,7 +31,7 @@ export const Header = ({
 }) => {
   const history = useHistory();
   const location = useLocation();
-  const [isDone] = useTimeout(200);
+  const [loaded, setLoaded] = useState(false);
 
   const handleTabClick = tab => {
     const { path } = tab;
@@ -44,38 +44,42 @@ export const Header = ({
     position: "relative",
     top: 0,
     width: "100vw",
-    zIndex: 1,
     justifyContent: "stretch",
-    opacity: isDone ? 1 : 0,
   };
 
   const tabProps = {
     onClick: handleTabClick,
     show: true,
+    tabIndex: 0,
   };
 
   return (
     <>
     <div id="Header" style={style}>
       <ScrollWatcher />
+      <div>
+      </div>
       <div id="Tabs" style={{
         display: "flex",
+        alignItems: "center",
         width: "100vw",
         justifyContent: "space-between",
         position: "absolute",
         zIndex: 1,
-        background,
+        background: background,
       }}>
-        <Image src={imgSrc} style={{
+        <Image onLoad={() => setLoaded(true)} id="header-image" className={Classnames({ loaded })} src={imgSrc} style={{
           position: "absolute",
           transform: "rotate(180deg)",
           width: "100vw",
-          fill: "green",
-          top: 50,
+          transition: "top 200ms",
+          top: loaded ? 30 : 0,
+          minWidth: 1000,
         }} />
-        <SkillsTab {...tabProps} />
-        <AboutTab {...tabProps} />
-        <ContactTab {...tabProps} />
+        <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "about" })} />
+        {/* <SkillsTab {...tabProps} /> */}
+        {/* <AboutTab {...tabProps} /> */}
+        {/* <ContactTab {...tabProps} /> */}
         <SocialIcons />
       </div>
     </div>

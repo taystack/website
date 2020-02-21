@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.7em;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 code {
@@ -13,18 +16,17 @@ code {
     monospace;
 }
 
-h1, h2, h3 {
-  /* font-family: monospace; */
-  /* text-transform: uppercase; */
-  /* letter-spacing: 1px; */
-  /* font-weight: normal; */
-}
-
 h3 {
-  font-size: 3em;
+  font-size: 1.2em;
+  line-height: 1.9em;
 }
 
 h2 {
+  font-size: 1.75em;
+  line-height: 1.9em;
+}
+
+h1 {
   font-size: 2em;
 }
 
@@ -33,32 +35,44 @@ p {
   font-size: 1.5em;
 }
 
-.hoverAppear {
-  opacity: 0.25;
-  cursor: pointer;
-  transition: opacity 80ms;
+a {
+  color: #4982e8;
+  text-decoration: none;
 }
 
-.hoverAppear.active,
-.hoverAppear:hover {
-  opacity: 0.75;
+code {
+  background: rgba(255,255,255,0.1);
+  padding: 0 4px;
+  border-radius: 2px;
+  display: inline-block;
 }
 
 .TabItem {
   font-size: 1.5em;
 }
 
+.Card {
+  flex-flow: row;
+}
+
 .Card .CardSide {
   box-sizing: border-box;
   flex-basis: 50%;
+  padding: 0 2vw;
 }
 
 .Card .CardSide img {
-  max-width: 38vw;
+  /* max-width: 38vw; */
+  width: 100%;
+  max-height: 50vh;
 }
 
 .Card.single .CardSide {
   flex-basis: 100%;
+}
+
+.CardSide.left {
+  text-align: right;
 }
 
 .ContactForm {
@@ -69,4 +83,30 @@ p {
   font-size: 1.5em;
   min-width: 200px;
   padding: 20px;
+}
+
+.faded {
+  opacity: 0.5;
+  font-size: 1.2em;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.CommunityIcons .card {
+  justify-content: flex-end;
+}
+
+.MergeIcon {
+  margin-right: 20px;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 10px;
+}
+
+.SocialIcon {
+  height: 40px;
+  width: 40px;
 }
