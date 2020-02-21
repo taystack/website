@@ -8,7 +8,7 @@ This is the source code [for my website.](https://taystack.github.io/website)
 
 ## Issues
 
-I'm treating the [issues tab](https://github.com/taystack/website/issues) as a blog for my various reviews on emerging technologies. [I've seen it done before](https://artsy.github.io/blog/2017/07/15/Comments-are-on/) and I think it's creative and fun.
+I'm treating the [issues tab filtered to label:Blog](https://github.com/taystack/website/issues?utf8=%E2%9C%93&q=label%3ABlog+) as a blog for my various reviews on emerging technologies. [I've seen it done before](https://artsy.github.io/blog/2017/07/15/Comments-are-on/) and I think it's creative and fun.
 
  - [React 16.8 Hooks - Part 1](https://github.com/taystack/website/issues/2#issue-567489111)
  
