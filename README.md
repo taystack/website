@@ -1,6 +1,6 @@
 # @taystack/website
 
-<img src="https://github.com/taystack/website/blob/master/src/assets/favicon.png?raw=true" height="128" />
+<img src="https://github.com/taystack/website/blob/master/src/assets/favicon.png?raw=true" height="128" /><img src="https://github.com/taystack/website/blob/master/src/assets/icons/javascript.png?raw=true" height="128" /><img src="https://github.com/taystack/website/blob/master/src/assets/icons/html5.png?raw=true" height="128" /><img src="https://github.com/taystack/website/blob/master/src/assets/icons/css3.png?raw=true" height="128" />
 
 ## Hey, I'm Taylor
 
