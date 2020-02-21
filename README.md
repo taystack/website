@@ -1,4 +1,8 @@
-# Hey, I'm Taylor
+# @taystack/website
+
+<img src="https://github.com/taystack/website/blob/master/src/assets/favicon.png?raw=true" height="128" />
+
+## Hey, I'm Taylor
 
 This is the source code [for my website.](https://taystack.github.io/website)
 
@@ -6,7 +10,7 @@ This is the source code [for my website.](https://taystack.github.io/website)
 
 I'm treating the [issues tab](https://github.com/taystack/website/issues) as a blog for my various reviews on emerging technologies. [I've seen it done before](https://artsy.github.io/blog/2017/07/15/Comments-are-on/) and I think it's creative and fun.
 
- - [React 16 Hooks. Yar har har](https://github.com/taystack/website/issues/2#issue-567489111)
+ - [React 16.8 Hooks - Part 1](https://github.com/taystack/website/issues/2#issue-567489111)
  
 
 I have plans to make a skinned app that wraps Github issues as a blog frontend. It's a good project to try out builds I've never used.
