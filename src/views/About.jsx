@@ -33,7 +33,6 @@ import testing from "../assets/bio/testing.svg";
 import concerns from "../assets/bio/concerns.svg";
 
 
-
 const About = ({
   dispatch,
 }) => {
