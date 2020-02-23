@@ -16,18 +16,11 @@ import {
 import { setCurrentTab } from "../redux/Actions";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
-// import aboutSrc from "../assets/bio/about.svg";
 import scienceSrc from "../assets/bio/science.svg";
 import californiaSrc from "../assets/bio/california.svg";
-// import coffeeSrc from "../assets/bio/coffee.svg";
-// import contactSrc from "../assets/bio/contact.svg";
 import skillsSrc from "../assets/bio/skills.svg";
-// import toolsSrc from "../assets/bio/tools.svg";
 import toolkitSrc from "../assets/bio/toolkit.svg";
-// import modulesSrc from "../assets/bio/modules.svg";
 import ownershipSrc from "../assets/bio/ownership.svg";
-// import tree from "../assets/bio/tree_bench_plain.svg";
-// import bigDataSrc from "../assets/bio/bigdata.svg";
 import responsive from "../assets/bio/responsive_plain.svg";
 import testing from "../assets/bio/testing.svg";
 import concerns from "../assets/bio/concerns.svg";

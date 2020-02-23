@@ -11,7 +11,7 @@ import SocialIcons from "../components/SocialIcons";
 import LoadingOverlay from "../components/LoadingOverlay";
 import colors from "../constants/colors";
 import ImageColors from "../helpers/ImageColors";
-import emailImgSrc from "../assets/bio/email.svg";
+import coffee from "../assets/bio/coffee.svg";
 
 
 const Footer = ({
@@ -45,14 +45,14 @@ const Footer = ({
           />
         </div>
         <div>
-          <Image src={emailImgSrc} />
+          <Image src={coffee} />
         </div>
       </Card>
     </Layer>
     <div style={{ position: "relative", height: "3vh", background: colors.white }}>
       <Image src={img} style={style} />
-      <Image className="floating" src={img3} style={style} />
-      <Image className="floating-one80" src={img3} style={style} />
+      <Image className="floating" src={img3} style={{ opacity: 0.5, ...style }} />
+      <Image className="floating-one80" src={img3} style={{ opacity: 0.5, ...style }} />
       <div style={{
         display: "flex",
         background: color,
