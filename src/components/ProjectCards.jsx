@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
 }
 
 const ProjectCards = ({ projects }) => {
-  const cards = useMemo(() => projects.map(project => (<ProjectCard project={project} />)), [projects]);
+  const cards = useMemo(() => projects.map(project => (<ProjectCard key={project.title} project={project} />)), [projects]);
   return (
     <div className="ProjectCards" style={{
       minHeight: "50vh",

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
-import { useHistory, useParams } from "react-router";
+import { useHistory, useParams, useLocation } from "react-router";
 import { connect } from "react-redux";
 import About from "./views/About";
 import Skills from "./views/Skills";
@@ -20,6 +20,9 @@ const Routes = connect(({ currentTab }) => ({ currentTab }))(({
   currentTab,
 }) => {
   const params = useParams();
+
+  const location = useLocation();
+  console.log("location", location);
 
   useEffect(() => {
     if (params.currentTab) dispatch(setCurrentTab(params.currentTab));
