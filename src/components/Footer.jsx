@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Layer from "../components/Layer";
 import Card from "../components/Card";
+import ProjectCards from "../components/ProjectCards";
 import Button from "../components/Button";
 import Image from "../components/Image";
 import CommunityIcons from "../components/CommunityIcons";
-import ProjectIcons from "../components/ProjectIcons";
+// import ProjectIcons from "../components/ProjectIcons";
 import SocialIcons from "../components/SocialIcons";
 import LoadingOverlay from "../components/LoadingOverlay";
 import colors from "../constants/colors";
@@ -20,8 +21,6 @@ const Footer = ({
   loading,
 }) => {
   const { img, img3, color, font } = useMemo(() => ImageColors.from(breakColor), [breakColor]);
-
-  const year = new Date().getFullYear();
 
   const style = {
     position: "absolute",
@@ -42,12 +41,16 @@ const Footer = ({
           <CommunityIcons
             background={color}
             color={font}
+            left
           />
         </div>
+
         <div>
           <Image src={coffee} />
         </div>
       </Card>
+
+      <ProjectCards />
     </Layer>
     <div style={{ position: "relative", height: "3vh", background: colors.white }}>
       <Image src={img} style={style} />
@@ -59,12 +62,11 @@ const Footer = ({
         justifyContent: "space-between",
         alignItems: "center",
       }}>
-        <ProjectIcons />
-        <span>© {year} Taylor Stackpole</span>
+        {/* <ProjectIcons /> */}
         <SocialIcons />
       </div>
     </div>
-    <LoadingOverlay />
+    {/* <LoadingOverlay /> */}
     </>
   )
 };

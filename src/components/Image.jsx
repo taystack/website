@@ -25,6 +25,7 @@ const Image = ({
 
   const cx = Classnames(className, { hasLoaded });
 
+  let transform = style.transform || false;
   const styles = {
     ...style,
     opacity: loaded ? 1 : 0,
