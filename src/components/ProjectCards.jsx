@@ -55,9 +55,6 @@ const ProjectCards = ({ projects }) => {
       width: "100%",
       padding: "0 5vw",
       boxSizing: "border-box",
-      // flexFlow: "row wrap",
-      // alignItems: "flex-start",
-      // justifyContent: "space-between",
     }}>
     <h2 style={{ textAlign: "center" }}>Some other projects...</h2>
       {cards}
