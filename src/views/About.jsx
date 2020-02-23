@@ -16,9 +16,10 @@ import {
 import { setCurrentTab } from "../redux/Actions";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
-import scienceSrc from "../assets/bio/science.svg";
+// import science from "../assets/bio/science.svg";
 import californiaSrc from "../assets/bio/california.svg";
 import skillsSrc from "../assets/bio/skills.svg";
+import science from "../assets/bio/science.svg";
 import toolkitSrc from "../assets/bio/toolkit.svg";
 import ownershipSrc from "../assets/bio/ownership.svg";
 import responsive from "../assets/bio/responsive_plain.svg";
@@ -51,13 +52,14 @@ const About = ({
           <div>
             <h2>I drink rocket fuel</h2>
             <p>
-              I've spent years in agile development across many teams.
+              I'm a straight-up JavaScript powerhouse.
+              I've also spent years in agile development across many teams.
               I know how to estimate my throughput to deliver above and beyond what is expected.
               Point me at feature gaps if you want to fill them.
               Point me at a problem areas to make them go away.
             </p>
           </div>
-          <Image src={scienceSrc} />
+          <Image src={skillsSrc} />
         </Card>
         <Card leftPad>
           <Image test src={ownershipSrc} />
@@ -78,13 +80,14 @@ const About = ({
 
       <Layer breakColor="purple">
         <Card leftPad>
-          <Image src={skillsSrc} />
+          <Image src={concerns} />
           <div>
-            <h2 id="i-am-js">I passionately JavaScript</h2>
+            <h2>I modularize and optimize</h2>
             <p>
-              I'm a straight-up JavaScript powerhouse.
-              I'm hip on the latest <a href="https://www.w3.org/standards/webdesign/script" target="_blank">ECMA JavaScript, and CSS3 Web APIs.</a>&nbsp;
-              I've yet to find a JavaScript bug I couldn't squish, or a library I couldn't get working or written.
+              The first step to optimizing a process is to define the moving parts.
+              I've had to deal with enormous projects in my profession.
+              The best projects to work on have clearly defined architectures, where each piece plays a clearly defined role.
+              When things don't make sense, I communicate with colleagues until we build a roadmap to fix it.
             </p>
           </div>
         </Card>
@@ -100,24 +103,11 @@ const About = ({
           </div>
           <Image src={testing} />
         </Card>
-
-        <Card leftPad>
-          <Image src={concerns} />
-          <div>
-            <h2>I modularize and optimize</h2>
-            <p>
-              The first step to optimizing a process is to define the moving parts.
-              I've had to deal with enormous projects in my profession.
-              The best projects to work on have clearly defined architectures, where each piece plays a clearly defined role.
-              When things don't make sense, I communicate with colleagues until we build a roadmap to fix it.
-            </p>
-          </div>
-        </Card>
       </Layer>
 
       <Layer breakColor="orange">
         <Card leftPad>
-          <Image src={skillsSrc} />
+          <Image src={science} />
           <div>
             <h2 id="designer">I designed this website</h2>
             <p>
