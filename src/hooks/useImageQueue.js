@@ -10,7 +10,7 @@ export default function useImageQueue(dispatch, src) {
       if (loaded) dispatch(dequeueImage(src));
       else dispatch(queueImage(src));
     }
-  }, [loaded, src]);
+  }, [loaded, src, dispatch]);
 
   return [loaded, setLoaded];
 }

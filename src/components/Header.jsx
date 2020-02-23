@@ -7,8 +7,7 @@ import AboutTab from "./AboutTab";
 import Image from "./Image";
 import Classnames from "../helpers/Classnames";
 import InstagramImage from "./InstagramImage";
-import ScrollWatcher from "./ScrollWatcher";
-import SkillsTab from "./Skills/SkillsTab";
+// import ScrollWatcher from "./ScrollWatcher";
 import githubSrc from "../assets/icons/github.svg";
 import npmSrc from "../assets/icons/npm.svg";
 import SocialIcons from "../components/SocialIcons";
@@ -57,9 +56,7 @@ export const Header = ({
   return (
     <>
     <div id="Header" style={style}>
-      <ScrollWatcher />
-      <div>
-      </div>
+      {/* <ScrollWatcher /> */}
       <div id="Tabs" style={{
         display: "flex",
         alignItems: "center",
@@ -78,9 +75,6 @@ export const Header = ({
           minWidth: 1000,
         }} />
         <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "about" })} />
-        {/* <SkillsTab {...tabProps} /> */}
-        {/* <AboutTab {...tabProps} /> */}
-        {/* <ContactTab {...tabProps} /> */}
         <SocialIcons />
       </div>
     </div>

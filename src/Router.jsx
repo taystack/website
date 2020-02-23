@@ -3,9 +3,9 @@ import { HashRouter, Route } from "react-router-dom";
 import { useHistory, useParams } from "react-router";
 import { connect } from "react-redux";
 import About from "./views/About";
-import Skills from "./views/Skills";
-import Contact from "./views/Contact";
-import Error404 from "./views/Error404";
+// import Skills from "./views/Skills";
+// import Contact from "./views/Contact";
+// import Error404 from "./views/Error404";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import colors from "./constants/colors";
@@ -30,9 +30,9 @@ const Routes = connect(({ currentTab }) => ({ currentTab }))(({
     <>
     <Route exact path="/" component={About} />
     <Route exact path="/about" component={About} />
-    <Route exact path="/skills" component={Skills} />
-    <Route exact path="/contact" component={Contact} />
-    <Route component={Error404} />
+    {/* <Route exact path="/skills" component={Skills} /> */}
+    {/* <Route exact path="/contact" component={Contact} /> */}
+    {/* <Route component={Error404} /> */}
     <Footer />
     </>
   );

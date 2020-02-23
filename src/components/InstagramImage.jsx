@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Image from "./Image";
 import useInstagramUserImage from "../hooks/useInstagramUserImage";
@@ -17,7 +17,7 @@ const InstagramImage = ({
       position: "relative",
       marginLeft: 10,
     }} onClick={onClick}>
-      <Image src={source} {...props} style={{ filter: "grayscale(1)", borderRadius: 40, padding: 10, }} />
+      <Image src={source} {...props} style={{ filter: "grayscale(1)", borderRadius: 40, padding: 10, opacity: loading ? 0 : 1 }} />
     </div>
   );
 };
