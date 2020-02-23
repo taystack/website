@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { useHistory, useParams } from "react-router";
 import { connect } from "react-redux";
 import About from "./views/About";
@@ -43,14 +43,14 @@ const AppRouter = () => {
     document.body.style.background = colors.black2;
   }, []);
   return (
-    <HashRouter basename="/">
+    <BrowserRouter>
       <div style={{ position: "relative" }}>
         <Header />
         <Route path="/:currentTab" component={Routes} />
         <Route exact path="/" component={Routes} />
         {/* <Route exact path="/" component={About} /> */}
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
