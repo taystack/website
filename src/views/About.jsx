@@ -14,7 +14,7 @@ import {
   projectProfile,
 } from "../constants/contact";
 import { setCurrentTab } from "../redux/Actions";
-import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
+// import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
 // import science from "../assets/bio/science.svg";
 import californiaSrc from "../assets/bio/california.svg";
