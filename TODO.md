@@ -1,2 +1,0 @@
-- useReducer for ScrollWatcher component.
- - Custom reducer hook for storing scroll position.
