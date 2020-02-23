@@ -1,45 +1,63 @@
-const borderChars = (text, char = "-") => {
-  const border = Array(text.length).fill(char).join("");
-  return `${border}
-${text}
-${border}
-`;
-};
-
-const init = borderChars("Hey, Welcome to my Javascript console.", "-");
+import resumeText from "./assets/Resume.txt";
+import resumePdf from "./assets/Resume.pdf";
 
 
-// Turn every letter into a span.
-const spanify = text => text.split("").map(l => `<span>${l}</span>`).join("");
+export default (global.Taylor || (global.Taylor = new Taylor()));
 
-// Clone a node and spanify its text contents
-const createSpanClone = (el, id) => {
-  const clone = el.cloneNode();
-  clone.id = "magnet-pointer";
-  document.body.appendChild(clone);
-  clone.innerHTML = spanify(el.innerText);
-  clone.syle.setProperty("position", "fixed");
-  clone.syle.setProperty("top", el.offsetTop);
-  clone.syle.setProperty("left", el.offsetLeft);
-  return clone;
-};
 
-export default class JSConsole {
-  constructor() {
-    console.log(init);
-    this.magnetPointer = undefined;
+function Taylor() {
+  setTimeout(() => {
+    console.log("Hey, welcome to the JavaScript console. I've left a global here.");
+    console.log("Try typing 'Taylor'")
+  }, 1000);
+
+  this.showResume = async function getResume(type = "text") {
+    const resume = await ({
+      text: handleResumeText,
+      pdf: handleResumePdf,
+    })[type]();
+    console.log(resume);
   }
 
-  magnetize(id) {
-    const el = document.getElementById(id);
-    this.magnetPointer = createSpanClone(el, "magnet-pointer");
-    return this.magnetPointer;
+  this.downloadResume = async function downloadResume(type = "pdf") {
+    const resume = await ({
+      text: handleResumeDownloadText,
+      pdf: handleResumeDownloadPdf,
+    })[type]();
   }
 
-  async getUser(username = "taystack") {
-    const src = `https://api.github.com/users/${username}/repos`;
-    const user = await fetch(src);
-    const data = await user.json();
-    console.log("data", data.map(({ name, id }) => ({ name, id })));
+  this.startEmail = function(body) {
+    const subject = "7334 user found this link";
+    const email = "tay.stack+console_7334_auto@gmail.com";
+    const link = `mailto:${email}?subject=${subject}`;
+    window.open(link, "_blank");
+  };
+
+  async function handleResumeText() {
+    const response = await fetch(resumeText);
+    return response.text();
+  }
+
+  async function handleResumePdf() {
+    const response = await fetch(resumePdf);
+    return response.text();
+  }
+
+  async function handleResumeDownloadText() {
+    initDownload(resumeText);
+  }
+
+  async function handleResumeDownloadPdf() {
+    initDownload(resumePdf);
+  }
+
+  function initDownload(source) {
+    const aTag = document.createElement("a");
+    aTag.href = source;
+    aTag.setAttribute("href", source);
+    aTag.setAttribute("target", "_blank");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
   }
 }

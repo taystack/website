@@ -7,7 +7,6 @@ import ProjectCards from "../components/ProjectCards";
 import Button from "../components/Button";
 import Image from "../components/Image";
 import CommunityIcons from "../components/CommunityIcons";
-// import ProjectIcons from "../components/ProjectIcons";
 import SocialIcons from "../components/SocialIcons";
 import LoadingOverlay from "../components/LoadingOverlay";
 import colors from "../constants/colors";
@@ -28,7 +27,6 @@ const Footer = ({
     minWidth: 1000,
     bottom: "3vh",
   };
-
 
   return (
     <>

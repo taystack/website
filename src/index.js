@@ -11,7 +11,7 @@ import thunk from "redux-thunk";
 import * as serviceWorker from "./serviceWorker";
 import Reducer from "./redux/Reducer";
 import Router from "./Router";
-// import JSConsole from "./JSConsole";
+import Taylor from "./JSConsole";
 import "./index.css";
 import "./styles/Interactive.css";
 import "./styles/TabItem.css";
