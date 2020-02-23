@@ -26,10 +26,10 @@ function Taylor() {
     })[type]();
   }
 
-  this.startEmail = function(body) {
+  this.startEmail = function(body = "If this was a scavenger hunt, I found the thing.") {
     const subject = "7334 user found this link";
     const email = "tay.stack+console_7334_auto@gmail.com";
-    const link = `mailto:${email}?subject=${subject}`;
+    const link = `mailto:${email}?subject=${subject}?body=${body}`;
     window.open(link, "_blank");
   };
 
