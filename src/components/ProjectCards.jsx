@@ -12,13 +12,17 @@ const projects = [{
   title: "@taystack/use-leet",
   src: "https://raw.githubusercontent.com/taystack/use-leet/master/logo.png",
   link: "https://github.com/taystack/use-leet",
+}, {
+  title: "@taystack/use-timeout",
+  src: "https://raw.githubusercontent.com/taystack/use-timeout/master/logo.png",
+  link: "https://github.com/taystack/use-timeout",
 }];
 
 const ProjectCard = ({ project }) => {
   const { title, src, link } = project;
   function handleClick() { window.open(link, "_blank"); }
   return (
-    <div onClick={handleClick} style={{
+    <div className="ProjectCard" onClick={handleClick} style={{
       display: "flex",
       flexDirection: "column",
       padding: 10,
@@ -28,7 +32,7 @@ const ProjectCard = ({ project }) => {
     }}>
       {title}
       <div style={{ opacity: 0.7, }}>
-        <Image src={src} style={{ maxHeight: 200 }} />
+        <Image src={src} style={{ maxHeight: 200, background: colors.white }} />
       </div>
     </div>
   );
@@ -37,7 +41,7 @@ const ProjectCard = ({ project }) => {
 const ProjectCards = ({ projects }) => {
   const cards = useMemo(() => projects.map(project => (<ProjectCard project={project} />)), [projects]);
   return (
-    <div style={{
+    <div className="ProjectCards" style={{
       minHeight: "100vh",
       maxWidth: 1000,
       margin: "0 auto",

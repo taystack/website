@@ -8,16 +8,16 @@ import Classnames from "../helpers/Classnames";
 
 
 const Image = ({
-  dispatch,
-  src,
   alt,
+  className,
+  dispatch,
   id,
-  scrollY,
-  style,
-  test,
   loaded,
   onLoad,
-  className,
+  scrollY,
+  src,
+  style,
+  test,
   ...props
 }) => {
   // Use the reducer here. Wait for all images to load properly
@@ -29,7 +29,7 @@ const Image = ({
   const styles = {
     ...style,
     opacity: loaded ? 1 : 0,
-    transition: "opacity 200ms, top 200ms",
+    transition: "opacity 300ms, top 400ms",
   };
   return (
     <img

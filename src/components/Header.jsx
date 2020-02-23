@@ -28,6 +28,7 @@ export const Header = ({
   currentTab,
   background,
   imgSrc,
+  allLoaded,
 }) => {
   const history = useHistory();
   const location = useLocation();
@@ -66,13 +67,13 @@ export const Header = ({
         justifyContent: "space-between",
         position: "absolute",
         zIndex: 1,
-        background: background,
+        transition: "opacity 300ms",
+        background: allLoaded ? background : "transparent",
       }}>
         <Image onLoad={() => setLoaded(true)} id="header-image" className={Classnames({ loaded })} src={imgSrc} style={{
           position: "absolute",
           transform: "rotate(180deg)",
           width: "100vw",
-          transition: "top 200ms",
           top: loaded ? 30 : 0,
           minWidth: 1000,
         }} />
@@ -92,8 +93,9 @@ Header.propTypes = {
   currentTab: PropTypes.string.isRequired,
 };
 
-export default connect(({ currentTab, bubbleSrc, theme }) => ({
+export default connect(({ currentTab, bubbleSrc, theme, allImagesLoaded }) => ({
   currentTab,
   background: theme,
   imgSrc: bubbleSrc,
+  allLoaded: allImagesLoaded,
 }))(Header);
