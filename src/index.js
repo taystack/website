@@ -20,7 +20,7 @@ import "./styles/Animation.css";
 import "./styles/Tablet.css";
 import "./styles/Mobile.css";
 
-GoogleAnalytics.initialize({"UA-1234567890": {}});
+// GoogleAnalytics.initialize({"UA-1234567890": {}});
 
 const store = createStore(
   Reducer,
