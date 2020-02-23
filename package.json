@@ -2,6 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://taystack.github.io/website",
   "dependencies": {
     "@taystack/use-timeout": "^1.1.0",
     "chart.js": "^2.9.3",
