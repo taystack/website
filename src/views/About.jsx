@@ -59,7 +59,7 @@ const About = ({
               Point me at a problem areas to make them go away.
             </p>
           </div>
-          <Image src={skillsSrc} />
+          <Image src={skillsSrc} alt="JavaScript powerhouse" />
         </Card>
         <Card leftPad>
           <Image test src={ownershipSrc} />
@@ -74,13 +74,13 @@ const About = ({
             <p>The JavaScript community moves fast. Real fast. That's why it's important for me to be a part of it. I'm always adding new skills to my tool belt.</p>
             <CommunityIcons />
           </div>
-          <Image src={toolkitSrc} />
+          <Image src={toolkitSrc} alt="JavaScript tools" />
         </Card>
       </Layer>
 
       <Layer breakColor="purple">
         <Card leftPad>
-          <Image src={concerns} />
+          <Image src={concerns} alt="Separate different web application concerns" />
           <div>
             <h2>I modularize and optimize</h2>
             <p>
@@ -101,13 +101,13 @@ const About = ({
               <a href="https://stackoverflow.com/questions/44769404/jest-spyon-function-called/46735186#46735186">I understand how to test.</a>
             </p>
           </div>
-          <Image src={testing} />
+          <Image src={testing} alt="Run all the tests on this baby" />
         </Card>
       </Layer>
 
       <Layer breakColor="orange">
         <Card leftPad>
-          <Image src={science} />
+          <Image src={science} alt="I design too" />
           <div>
             <h2 id="designer">I designed this website</h2>
             <p>
@@ -130,7 +130,7 @@ const About = ({
               I've been employing <code>flexbox</code> with <code>@media</code> query layouts for years.
             </p>
           </div>
-          <Image src={responsive} />
+          <Image src={responsive} alt="Responsive design" />
         </Card>
 
       </Layer>

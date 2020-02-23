@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
       marginBottom: 15,
     }}>
       <div className="noMobile noTablett" style={{ opacity: 0.7, height: 100 }}>
-        <Image src={src} style={{ maxWidth: 200, background: colors.white }} />
+        <Image alt={`${title} - a library of mine`} src={src} style={{ maxWidth: 200, background: colors.white }} />
       </div>
       <div style={{ paddingLeft: 10, width: "100%" }}>
         <a href={link} target="_blank"><strong>{title}</strong></a>

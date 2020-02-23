@@ -46,7 +46,7 @@ const Footer = ({
         </div>
 
         <div>
-          <Image src={coffee} />
+          <Image src={coffee} alt="I drink coffee and like Zelda" />
         </div>
       </Card>
 

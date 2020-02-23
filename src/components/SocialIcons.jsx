@@ -29,11 +29,11 @@ export const IconWrapper = ({ children, className, style }) => (
 IconWrapper.defaultProps = {
   style: {},
 };
-export const Github = ({ props, style }) => (<Image {...props} src={github} onClick={() => window.open(githubProfile, "_blank")} id="github-link" className="SocialIcon" style={style} />);
-export const StackOverflow = ({ props, style }) => (<Image {...props} src={stackoverflow} onClick={() => window.open(stackoverflowProfile, "_blank")} id="stackoverflow-link" className="SocialIcon" style={style} />);
-export const LinkedIn = ({ props, style }) => (<Image {...props} src={linkedin} onClick={() => window.open(linkedinProfile, "_blank")} id="linkedin-link" className="SocialIcon" style={style} />);
-export const Npm = ({ props, style }) => (<Image {...props} src={npm} onClick={() => window.open(npmProfile, "_blank")} id="npm-link" className="SocialIcon" style={style} />);
-export const Email = ({ props, style }) => (<Image {...props} src={email} onClick={() => window.open(emailLink, "_blank")} id="npm-link" className="SocialIcon" style={style} />);
+export const Github = ({ props, style }) => (<Image {...props} alt="Link to my github" src={github} onClick={() => window.open(githubProfile, "_blank")} id="github-link" className="SocialIcon" style={style} />);
+export const StackOverflow = ({ props, style }) => (<Image {...props} alt="Link to my stackoverflow" src={stackoverflow} onClick={() => window.open(stackoverflowProfile, "_blank")} id="stackoverflow-link" className="SocialIcon" style={style} />);
+export const LinkedIn = ({ props, style }) => (<Image {...props} alt="Link to my linkedin" src={linkedin} onClick={() => window.open(linkedinProfile, "_blank")} id="linkedin-link" className="SocialIcon" style={style} />);
+export const Npm = ({ props, style }) => (<Image {...props} alt="Link to my npm" src={npm} onClick={() => window.open(npmProfile, "_blank")} id="npm-link" className="SocialIcon" style={style} />);
+export const Email = ({ props, style }) => (<Image {...props} alt="Link to my email" src={email} onClick={() => window.open(emailLink, "_blank")} id="npm-link" className="SocialIcon" style={style} />);
 
 const SocialIcons = ({
   noMobile,
