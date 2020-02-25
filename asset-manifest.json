@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.4dd52cc2.chunk.css",
-    "main.js": "/website/static/js/main.83d44465.chunk.js",
-    "main.js.map": "/website/static/js/main.83d44465.chunk.js.map",
+    "main.css": "/website/static/css/main.097de846.chunk.css",
+    "main.js": "/website/static/js/main.eeef4cf1.chunk.js",
+    "main.js.map": "/website/static/js/main.eeef4cf1.chunk.js.map",
     "runtime-main.js": "/website/static/js/runtime-main.b656aa90.js",
     "runtime-main.js.map": "/website/static/js/runtime-main.b656aa90.js.map",
-    "static/js/2.9be0fa57.chunk.js": "/website/static/js/2.9be0fa57.chunk.js",
-    "static/js/2.9be0fa57.chunk.js.map": "/website/static/js/2.9be0fa57.chunk.js.map",
+    "static/js/2.1f274bfa.chunk.js": "/website/static/js/2.1f274bfa.chunk.js",
+    "static/js/2.1f274bfa.chunk.js.map": "/website/static/js/2.1f274bfa.chunk.js.map",
     "index.html": "/website/index.html",
-    "precache-manifest.a8a6128ef796eec8bb454fb7a1d7e08e.js": "/website/precache-manifest.a8a6128ef796eec8bb454fb7a1d7e08e.js",
+    "precache-manifest.259ef3732e29464ab4e09d43222bfbd7.js": "/website/precache-manifest.259ef3732e29464ab4e09d43222bfbd7.js",
     "service-worker.js": "/website/service-worker.js",
-    "static/css/main.4dd52cc2.chunk.css.map": "/website/static/css/main.4dd52cc2.chunk.css.map",
-    "static/js/2.9be0fa57.chunk.js.LICENSE.txt": "/website/static/js/2.9be0fa57.chunk.js.LICENSE.txt",
+    "static/css/main.097de846.chunk.css.map": "/website/static/css/main.097de846.chunk.css.map",
+    "static/js/2.1f274bfa.chunk.js.LICENSE.txt": "/website/static/js/2.1f274bfa.chunk.js.LICENSE.txt",
     "static/media/Resume.pdf": "/website/static/media/Resume.7e559f68.pdf",
     "static/media/Resume.txt": "/website/static/media/Resume.bdaebdb0.txt",
     "static/media/black.svg": "/website/static/media/black.425341d9.svg",
@@ -21,6 +21,7 @@
     "static/media/california.svg": "/website/static/media/california.d883da36.svg",
     "static/media/coffee.svg": "/website/static/media/coffee.fbfcbb6d.svg",
     "static/media/concerns.svg": "/website/static/media/concerns.710d96c1.svg",
+    "static/media/cv.svg": "/website/static/media/cv.cd742250.svg",
     "static/media/email.svg": "/website/static/media/email.ad69acb4.svg",
     "static/media/github.svg": "/website/static/media/github.806dc612.svg",
     "static/media/green.svg": "/website/static/media/green.1812c204.svg",
@@ -50,8 +51,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b656aa90.js",
-    "static/js/2.9be0fa57.chunk.js",
-    "static/css/main.4dd52cc2.chunk.css",
-    "static/js/main.83d44465.chunk.js"
+    "static/js/2.1f274bfa.chunk.js",
+    "static/css/main.097de846.chunk.css",
+    "static/js/main.eeef4cf1.chunk.js"
   ]
 }
