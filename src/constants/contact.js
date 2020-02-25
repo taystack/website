@@ -5,7 +5,7 @@ export const projectProfile = `${githubProfile}/website`;
 export const npmProfile = "https://www.npmjs.com/~taystack";
 export const stackoverflowProfile = "https://stackoverflow.com/users/1819265/taystack";
 export const linkedinProfile = "https://www.linkedin.com/in/taylor-stackpole-71bb8762/";
-export const emailLink = "mailto:tay.stack@gmail.com+contact";
+export const emailLink = "mailto:tay.stack+contact@gmail.com";
 
 const contact = {
   cvLink: CV_LINK,
