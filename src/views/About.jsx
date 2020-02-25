@@ -71,7 +71,7 @@ const About = ({
         <Card rightPad>
           <div>
             <h2>I look into the future</h2>
-            <p>The JavaScript community moves fast. Real fast. That's why it's important for me to be a part of it. I'm always adding new skills to my tool belt.</p>
+            <p>The JavaScript community moves fast. Real fast. That's why it's important for me to be a part of it. I'm always adding new skill to my tool belt.</p>
             <CommunityIcons />
           </div>
           <Image src={toolkitSrc} alt="JavaScript tools" />

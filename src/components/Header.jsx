@@ -19,6 +19,7 @@ import {
 import {
   setCurrentTab,
   setScrollPosition,
+  setShowBlogView,
 } from "../redux/Actions";
 
 
@@ -35,7 +36,9 @@ export const Header = ({
 
   const handleTabClick = tab => {
     const { path } = tab;
-    if (!location.pathname.includes(path)) history.push(path);
+    history.push("/");
+    dispatch(setShowBlogView(false));
+    // if (!location.pathname.includes(path)) history.push(path);
   };
 
   const style = {
@@ -72,9 +75,9 @@ export const Header = ({
           transform: "rotate(180deg)",
           width: "100vw",
           top: loaded ? 30 : 0,
-          minWidth: 1000,
+          // minWidth: 1000,
         }} />
-        <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "about" })} />
+        <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "/" })} />
         <SocialIcons />
       </div>
     </div>

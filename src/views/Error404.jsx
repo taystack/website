@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 // import PropTypes from "prop-types";
 import Layer from "../components/Layer";
@@ -7,15 +7,17 @@ import Card from "../components/Card";
 import Image from "../components/Image";
 import Transition from "../components/Transition";
 import error404 from "../assets/bio/error.svg";
+import { setCurrentTab } from "../redux/Actions";
 
 
 const Error404 = ({
   dispatch,
   currentTab,
 }) => {
-
-  if (currentTab !== "error") return null;
-
+  useEffect(() => {
+    console.log("setting ERROR from", error404);
+    dispatch(setCurrentTab("error"));
+  }, []);
   return (
     <Transition>
       <Layer breakColor="red" isTop>
@@ -27,7 +29,6 @@ const Error404 = ({
           </div>
         </Card>
       </Layer>
-      {/* <Footer breakColor="red" /> */}
     </Transition>
   );
 };

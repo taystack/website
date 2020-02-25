@@ -10,12 +10,14 @@
     "react": "^16.8.6",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.8.6",
+    "react-markdown": "^4.3.1",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "use-timeout": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

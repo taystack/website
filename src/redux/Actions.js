@@ -7,6 +7,8 @@ export const SET_CURRENT_TAB = "SET_CURRENT_TAB";
 export const SET_PROJECT_ISSUES = "SET_PROJECT_ISSUES";
 export const SET_QUEUED_IMAGES = "SET_QUEUED_IMAGES";
 export const SET_SCROLL_Y = "SET_SCROLL_Y";
+export const SET_ISSUES = "SET_ISSUES";
+export const SET_SHOW_BLOG_VIEW = "SET_SHOW_BLOG_VIEW";
 
 
 export const getTabConstant = (key, getAllTabs = false) => {
@@ -72,6 +74,16 @@ export const setQueuedImages = (queuedImages, isDone) => ({
 export const setAllImagesLoaded = done => ({
   type: SET_ALL_IMAGES_LOADED,
   done,
+});
+
+export const setIssues = issues => ({
+  type: SET_ISSUES,
+  issues,
+});
+
+export const setShowBlogView = show => ({
+  type: SET_SHOW_BLOG_VIEW,
+  show,
 });
 
 export const dequeueImage = src => {

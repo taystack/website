@@ -17,7 +17,12 @@ const InstagramImage = ({
       position: "relative",
       marginLeft: 10,
     }} onClick={onClick}>
-      <Image src={source} {...props} style={{ filter: "grayscale(1)", borderRadius: 40, padding: 10, opacity: loading ? 0 : 1 }} />
+      <Image
+        src={source}
+        {...props}
+        style={{ filter: "grayscale(1)", borderRadius: 40, padding: 10, opacity: loading ? 0 : 1 }}
+        alt={loading ? "…" : "Something on your end can't load an Instagram image"}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import colors from "../constants/colors";
-import bubblesBlue from "../assets/bubbles/blue.svg";
-import bubblesBlueBottom from "../assets/bubbles/blueBottom.svg";
-import bubblesBlueLoose from "../assets/bubbles/blueLoose.svg";
+import bubblesGreen from "../assets/bubbles/green.svg";
+import bubblesGreenBottom from "../assets/bubbles/greenBottom.svg";
+import bubblesGreenLoose from "../assets/bubbles/greenLoose.svg";
 
 
 import {
@@ -10,16 +10,20 @@ import {
   SET_SCROLL_Y,
   SET_QUEUED_IMAGES,
   SET_ALL_IMAGES_LOADED,
+  SET_ISSUES,
+  SET_SHOW_BLOG_VIEW,
 } from "./Actions";
 
 export const initialState = {
-  bubbleSrc: bubblesBlue,
+  bubbleSrc: bubblesGreen,
   currentTab: "about", // shorthand name
   theme: colors.about,
   scrollY: 0,
   issues: [],
   queuedImages: {},
   allImagesLoaded: false,
+  issues: [],
+  showBlogView: false,
 };
 
 export default function Reducer(state = initialState, action) {
@@ -49,6 +53,14 @@ export default function Reducer(state = initialState, action) {
 
     case SET_QUEUED_IMAGES:
       return { ...state, queuedImages: action.queuedImages };
+      break;
+
+    case SET_ISSUES:
+      return { ...state, issues: action.issues };
+      break;
+
+    case SET_SHOW_BLOG_VIEW:
+      return { ...state, showBlogView: action.show };
       break;
 
     default:

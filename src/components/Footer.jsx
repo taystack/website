@@ -1,20 +1,23 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import Layer from "../components/Layer";
-import Card from "../components/Card";
-import ProjectCards from "../components/ProjectCards";
-import Button from "../components/Button";
-import Image from "../components/Image";
-import CommunityIcons from "../components/CommunityIcons";
-import SocialIcons from "../components/SocialIcons";
-import LoadingOverlay from "../components/LoadingOverlay";
+import Layer from "./Layer";
+import Card from "./Card";
+import ProjectCards from "./ProjectCards";
+import Button from "./Button";
+import Image from "./Image";
+import CommunityIcons from "./CommunityIcons";
+import SocialIcons from "./SocialIcons";
+import LoadingOverlay from "./LoadingOverlay";
+import BlogView from "./BlogView";
 import colors from "../constants/colors";
+import Taylor from "../JSConsole";
 import ImageColors from "../helpers/ImageColors";
 import coffee from "../assets/bio/coffee.svg";
 
 
 const Footer = ({
+  dispatch,
   currentTab,
   breakColor,
   loading,
@@ -24,9 +27,13 @@ const Footer = ({
   const style = {
     position: "absolute",
     width: "100vw",
-    minWidth: 1000,
+    // minWidth: 1000,
     bottom: "3vh",
   };
+
+  useEffect(() => {
+    Taylor.setDispatch(dispatch);
+  }, []);
 
   return (
     <>
@@ -57,7 +64,7 @@ const Footer = ({
       <div style={{
         display: "flex",
         background: color,
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         alignItems: "center",
       }}>
         {/* <ProjectIcons /> */}
@@ -65,6 +72,7 @@ const Footer = ({
       </div>
     </div>
     {/* <LoadingOverlay /> */}
+    <BlogView />
     </>
   )
 };

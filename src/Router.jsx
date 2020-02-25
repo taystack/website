@@ -33,22 +33,24 @@ const Routes = connect(({ currentTab }) => ({ currentTab }))(({
     {/* <Route exact path="/skills" component={Skills} /> */}
     {/* <Route exact path="/contact" component={Contact} /> */}
     {/* <Route component={Error404} /> */}
-    <Footer />
     </>
   );
 });
 
-const AppRouter = () => {
+const AppRouter = ({ dispatch }) => {
   useEffect(() => {
     document.body.style.background = colors.black2;
+    dispatch(setCurrentTab("about"))
   }, []);
   return (
     <HashRouter basename="/">
       <div style={{ position: "relative" }}>
         <Header />
-        <Route path="/:currentTab" component={Routes} />
-        <Route exact path="/" component={Routes} />
+        {/* <Route path="/:currentTab" component={Routes} /> */}
+        {/* <Route exact path="/" component={Routes} /> */}
         {/* <Route exact path="/" component={About} /> */}
+        <Route exact path="/" component={About} />
+        <Footer />
       </div>
     </HashRouter>
   );
@@ -56,4 +58,4 @@ const AppRouter = () => {
 
 AppRouter.propTypes = {};
 
-export default AppRouter;
+export default connect()(AppRouter);

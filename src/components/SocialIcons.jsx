@@ -52,6 +52,7 @@ const SocialIcons = ({
       <IconWrapper className={className}><Github /></IconWrapper>
       <IconWrapper className={className}><StackOverflow /></IconWrapper>
       <IconWrapper className={className}><LinkedIn /></IconWrapper>
+      <IconWrapper className={className}><Email /></IconWrapper>
     </div>
   );
 }

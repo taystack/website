@@ -53,7 +53,7 @@ const Layer = ({
   const [isDone] = useTimeout(100);
   const imageStyle = {
     width: "100vw",
-    minWidth: 1000,
+    // minWidth: 1000,
     position: "absolute",
     transition: "opacity 200ms ease-in",
     opacity: isDone ? 1 : 0,
