@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Image from "./Image";
 import Classnames from "../helpers/Classnames";
 import colors from "../constants/colors";
+import Taylor from "../JSConsole";
 
 // Images
 import github from "../assets/icons/github.svg";
@@ -17,7 +18,7 @@ import {
   npmProfile,
   stackoverflowProfile,
   linkedinProfile,
-  emailLink
+  emailLink,
 } from "../constants/contact";
 
 export const IconWrapper = ({ children, className, style }) => (
@@ -38,7 +39,7 @@ export const StackOverflow = ({ props, style }) => (<Image {...props} alt="Link 
 export const LinkedIn = ({ props, style }) => (<Image {...props} alt="Link to my linkedin" src={linkedin} onClick={() => window.open(linkedinProfile, "_blank")} id="linkedin-link" className="SocialIcon hoverAppear" style={style} />);
 export const Npm = ({ props, style }) => (<Image {...props} alt="Link to my npm" src={npm} onClick={() => window.open(npmProfile, "_blank")} id="npm-link" className="SocialIcon hoverAppear" style={style} />);
 export const Email = ({ props, style }) => (<Image {...props} alt="Link to my email" src={email} onClick={() => window.open(emailLink, "_blank")} id="npm-link" className="SocialIcon hoverAppear" style={style} />);
-export const Cv = ({ props, style }) => (<Image {...props} alt="Link to my Cv" src={cv} onClick={() => window.open(emailLink, "_blank")} id="npm-link" className="SocialIcon hoverAppear" style={style} />);
+export const Cv = ({ props, style }) => (<Image {...props} alt="Link to my Cv" src={cv} onClick={() => Taylor.downloadResume()} id="npm-link" className="SocialIcon hoverAppear" style={style} />);
 
 const SocialIcons = ({
   noMobile,

@@ -25,6 +25,10 @@ const Image = ({
 
   const cx = Classnames(className, { hasLoaded });
 
+  const handleKeyDown = (event) => {
+    if (event.target.key === "Enter") props.onClick(event);
+  }
+
   let transform = style.transform || false;
   const styles = {
     ...style,
@@ -34,11 +38,11 @@ const Image = ({
   return (
     <img
       className={cx}
-      // ref={ref}
       onLoad={event => {
         setLoaded(true);
         onLoad(event);
       }}
+      onKeyDown={handleKeyDown}
       {...props}
       src={src}
       id={id}

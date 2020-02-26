@@ -13,9 +13,9 @@ import SocialIcons, {
   Email,
   StackOverflow,
   LinkedIn,
+  Cv,
   IconWrapper,
 } from "./SocialIcons";
-// import LoadingOverlay from "./LoadingOverlay";
 import BlogView from "./BlogView";
 import colors from "../constants/colors";
 import Taylor from "../JSConsole";
@@ -84,6 +84,7 @@ const Footer = ({
       <Image className="floating" src={img3} style={{ opacity: 0.5, ...style }} />
       <Image className="floating-one80" src={img3} style={{ opacity: 0.5, ...style }} />
       <div style={{ padding: 10, background: color }}>
+        <FiftyFifty lhs={<Cv />} rhs="CV" />
         <FiftyFifty lhs={<Email />} rhs="Email" />
         <FiftyFifty lhs={<LinkedIn />} rhs="LinkedIn" />
         <FiftyFifty lhs={<Github />} rhs="GitHub" />

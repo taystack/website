@@ -77,7 +77,7 @@ export const Header = ({
           top: loaded ? 30 : 0,
           // minWidth: 1000,
         }} />
-        <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "/" })} />
+        {/* <InstagramImage className="SocialIcon" onClick={() => handleTabClick({ path: "/" })} /> */}
         <SocialIcons />
       </div>
     </div>
