@@ -165,19 +165,19 @@ function Taylor() {
     // const response = await fetch(issuesUrl);
     // const issues = await response.json();
 
-    // let text = "I'm trying to be more involved in development communities. Here are some things I think are good:\n";
+    let text = "I'm trying to be more involved in development communities. Here are some things I think are good:\n";
 
-    // issues.forEach(issue => {
-    //   text += "\n";
-    //   text += issue.title + "\n";
-    //   text += issue.html_url + "\n";
-    //   text += issue.labels.map(tag => tag.name).join(" | ") + "\n";
-    //   text += "\n";
-    // });
-    // console.log(text);
+    issues.forEach(issue => {
+      text += "\n";
+      text += issue.title + "\n";
+      text += issue.html_url + "\n";
+      text += issue.labels.map(tag => tag.name).join(" | ") + "\n";
+      text += "\n";
+    });
+    console.log(text);
 
-    this.dispatch(setIssues(issues));
-    this.dispatch(setShowBlogView(true));
+    // this.dispatch(setIssues(issues));
+    // this.dispatch(setShowBlogView(true));
   }
 
   this.startEmail = function startEmail(body = "If this was a scavenger hunt, I found the thing.") {
