@@ -32,7 +32,7 @@ const About = ({
 }) => {
   // useGoogleAnalytics("about");
   useEffect(() => {
-    document.title = "About | Taylor Stackpole the software engineer"
+    document.title = "About | Taylor Stackpole 7h3 50f7w4r3 3ngin33r"
   }, []);
   return (
     <Transition transition="fade-slide">

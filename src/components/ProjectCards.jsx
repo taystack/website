@@ -19,6 +19,11 @@ const projects = [{
   src: "https://raw.githubusercontent.com/taystack/use-leet/master/logo.png",
   link: "https://github.com/taystack/use-leet",
   body: "React 16.8 Hook: Leet-ify your text with leet speak. React hook turns your given text value into 1337 SP34K.",
+}, {
+  title: "@taystack/use-typed-text",
+  src: "https://raw.githubusercontent.com/taystack/use-typed-text/master/logo.png",
+  link: "https://github.com/taystack/use-typed-text",
+  body: "React 16.8 Hook: Make it look like someone is typing.",
 }];
 
 const ProjectCard = ({ project }) => {
