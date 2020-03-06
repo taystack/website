@@ -7,11 +7,12 @@ const Card = ({
   children,
   leftPad,
   rightPad,
+  ...props
 }) => {
   const isSingle = children && !children[0];
   const className = Classnames("Card", { single: isSingle, leftPad, rightPad });
   return (
-    <div className={className} style={{
+    <div {...props} className={className} style={{
       width: "100vw",
       maxWidth: 1000,
       margin: "0 auto",
@@ -49,13 +50,6 @@ function CardSide({ children, padded, side }) {
 
 Card.propTypes = {
   children: PropTypes.any,
-  light: PropTypes.bool,
-  isTop: PropTypes.bool,
 }
-
-Card.defaultProps = {
-  isTop: false,
-  light: false,
-};
 
 export default Card;

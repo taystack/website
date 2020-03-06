@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import useTimeout from "@taystack/use-timeout";
-import Classnames from "../helpers/Classnames";
 import colors from "../constants/colors";
 import Image from "./Image";
 import bubbleSrc from "../assets/bubbles/black.svg";
@@ -9,6 +8,7 @@ import bubbleWhiteSrc from "../assets/bubbles/white.svg";
 import bubbleWhiteBottomSrc from "../assets/bubbles/whiteBottom.svg";
 import Card from "./Card";
 import ImageColors from "../helpers/ImageColors";
+import { useClassnames } from "../hooks/useClassnames";
 
 
 export function useBreakSources(color = "white") {
@@ -47,6 +47,7 @@ const Layer = ({
   isBottom,
   style,
   breakColor,
+  ...props
 }) => {
   const [src, src2, src3] = useBreakSources(breakColor);
   const { minHeight } = useLayerDimensions(isBottom);
@@ -64,8 +65,9 @@ const Layer = ({
   } else {
     floatingImageStyle.bottom = "100%";
   }
+  const cx = useClassnames("Layer", props.className);
   return (
-    <div className="Layer" style={{
+    <div className="Layer" {...props} style={{
       background: `linear-gradient(${[colors.black2, colors.black].join()})`,
       position: "relative",
       display: "flex",

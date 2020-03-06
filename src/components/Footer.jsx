@@ -60,7 +60,7 @@ const Footer = ({
   return (
     <>
     {/* <Layer breakColor={breakColor} isBottom> */}
-    <Layer breakColor="orange" isBottom>
+    <Layer id="Footer" breakColor="orange" isBottom>
       <Card rightPad>
         <div>
           <h2 id="contact">Like what you see?</h2>
