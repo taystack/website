@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b3c93f882129ddce09efc259e377d51",
+    "revision": "96ed674bf6ee773b434b71ec2283067d",
     "url": "/website/index.html"
   },
   {
-    "revision": "32d0b332ee63b3d1d809",
-    "url": "/website/static/css/main.eb0f56f9.chunk.css"
+    "revision": "1f51ecb7033141d0e8cd",
+    "url": "/website/static/css/main.097de846.chunk.css"
   },
   {
-    "revision": "786ca0018bebc5490b07",
-    "url": "/website/static/js/2.b795b6a6.chunk.js"
+    "revision": "47bc0eecab0265a69810",
+    "url": "/website/static/js/2.ee4557cc.chunk.js"
   },
   {
     "revision": "61460a9918638f89da762dcefb150768",
-    "url": "/website/static/js/2.b795b6a6.chunk.js.LICENSE.txt"
+    "url": "/website/static/js/2.ee4557cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "32d0b332ee63b3d1d809",
-    "url": "/website/static/js/main.b1cd848d.chunk.js"
+    "revision": "1f51ecb7033141d0e8cd",
+    "url": "/website/static/js/main.cb3a34cb.chunk.js"
   },
   {
     "revision": "29db59fd0d388444716f",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bdaebdb071fc077ab98776ba76709185",
     "url": "/website/static/media/Resume.bdaebdb0.txt"
+  },
+  {
+    "revision": "d3bfec0116357b0d845c316b52a63ac3",
+    "url": "/website/static/media/arrow.d3bfec01.svg"
   },
   {
     "revision": "425341d9861d577617b5a5dfd8ba4bd4",
@@ -108,6 +112,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/website/static/media/ownership.c39046a9.svg"
   },
   {
+    "revision": "a48ea901b86b971894e05219ec6b2318",
+    "url": "/website/static/media/parisoma.a48ea901.jpg"
+  },
+  {
     "revision": "88491966624676c7e59cacb6cb6ad5ff",
     "url": "/website/static/media/purple.88491966.svg"
   },
@@ -142,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "56ec49ccda1afacc23f9358306dec470",
     "url": "/website/static/media/skills.56ec49cc.svg"
+  },
+  {
+    "revision": "2f1f035a58843f20df888bb00a084f8b",
+    "url": "/website/static/media/spur.2f1f035a.jpg"
   },
   {
     "revision": "b2956979606828967045ef48b8791f63",
